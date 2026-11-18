@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoTalk — Offline Nearby Chat | Official Download</title>
+<meta name="description" content="GeoTalk: offline nearby chat over Bluetooth with Smart Auto-Router and GPS. Download the official Android APK.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#070d1a; --bg2:#0b1526; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.09);
+    --text:#eef3fb; --muted:#9db1cf; --accent:#3b82f6; --accent2:#22d3ee; --green:#34d399;
+  }
+  body{ font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif; background:var(--bg); color:var(--text);
+        min-height:100vh; overflow-x:hidden; }
+  .glow{ position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(600px 400px at 15% -5%, rgba(59,130,246,.28), transparent 60%),
+      radial-gradient(700px 500px at 90% 10%, rgba(34,211,238,.16), transparent 60%),
+      radial-gradient(800px 600px at 50% 110%, rgba(59,130,246,.14), transparent 60%),
+      linear-gradient(180deg, var(--bg2), var(--bg)); }
+  .wrap{ position:relative; z-index:1; max-width:1060px; margin:0 auto; padding:28px 20px 64px; }
+  header{ display:flex; align-items:center; gap:12px; }
+  .logo{ width:44px; height:44px; border-radius:13px; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); font-size:22px; font-weight:800; color:#fff;
+    box-shadow:0 8px 24px rgba(59,130,246,.45); }
+  .brand{ font-size:20px; font-weight:700; letter-spacing:.3px; }
+  .badge{ margin-left:auto; font-size:12px; color:var(--green); border:1px solid rgba(52,211,153,.35);
+    background:rgba(52,211,153,.08); padding:6px 12px; border-radius:999px; }
+  .hero{ text-align:center; padding:64px 10px 10px; }
+  .hero .icon{ width:104px; height:104px; margin:0 auto 22px; border-radius:28px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; align-items:center; justify-content:center;
+    font-size:52px; font-weight:800; color:#fff; box-shadow:0 24px 60px rgba(59,130,246,.4); }
+  h1{ font-size:clamp(38px,7vw,60px); font-weight:800; line-height:1.08; letter-spacing:-.5px; }
+  h1 .grad{ background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .tag{ margin:16px auto 6px; max-width:620px; color:var(--muted); font-size:clamp(15px,2.6vw,18px); line-height:1.65; }
+  .tagbn{ color:#c7d5ec; font-size:15px; }
+  .meta{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:22px 0 30px; }
+  .chip{ font-size:13px; color:var(--muted); border:1px solid var(--line); background:var(--card);
+    padding:7px 14px; border-radius:999px; }
+  .chip b{ color:var(--text); font-weight:600; }
+  .dl{ display:inline-flex; align-items:center; gap:12px; text-decoration:none; color:#fff; font-size:19px; font-weight:700;
+    background:linear-gradient(135deg,var(--accent),#2563eb); padding:17px 38px; border-radius:999px;
+    box-shadow:0 16px 40px rgba(37,99,235,.45); transition:transform .15s ease, box-shadow .15s ease; }
+  .dl:hover{ transform:translateY(-2px); box-shadow:0 22px 50px rgba(37,99,235,.55); }
+  .dl small{ font-size:12.5px; font-weight:500; opacity:.85; }
+  .sha{ margin-top:14px; font-size:11.5px; color:#7288a6; word-break:break-all; max-width:560px; margin-left:auto; margin-right:auto; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-top:56px; }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px 22px;
+    backdrop-filter:blur(6px); }
+  .card .ic{ font-size:26px; margin-bottom:12px; }
+  .card h3{ font-size:17px; margin-bottom:8px; }
+  .card p{ color:var(--muted); font-size:14px; line-height:1.65; }
+  .steps{ margin-top:56px; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px 26px; }
+  .steps h2{ font-size:21px; margin-bottom:18px; }
+  .step{ display:flex; gap:14px; margin-bottom:14px; }
+  .num{ flex:0 0 30px; width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; }
+  .step p{ color:var(--muted); font-size:14.5px; line-height:1.6; padding-top:5px; }
+  .step p b{ color:var(--text); }
+  footer{ text-align:center; margin-top:52px; color:#7288a6; font-size:13px; line-height:1.8; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <div class="logo">G</div>
+    <div class="brand">GeoTalk</div>
+    <div class="badge">● Official download</div>
+  </header>
+
+  <section class="hero">
+    <div class="icon">G</div>
+    <h1>Chat nearby.<br><span class="grad">No internet needed.</span></h1>
+    <p class="tag">GeoTalk connects you with people around you over Bluetooth — free, private, and fully offline. Its Smart Auto-Router picks the best route for every message, and GPS adds your location and distance.</p>
+    <p class="tagbn">ইন্টারনেট ছাড়াই কাছের মানুষের সাথে চ্যাট — সম্পূর্ণ ফ্রি।</p>
+    <div class="meta">
+      <span class="chip">Version <b>1.0.0</b></span>
+      <span class="chip">Size <b>34 KB</b></span>
+      <span class="chip">Android <b>8.0+</b></span>
+      <span class="chip">Price <b>Free</b></span>
+    </div>
+    <a class="dl" href="GeoTalk-v1.apk" download>⬇ Download for Android <small>APK · v1.0.0</small></a>
+    <p class="sha">SHA-256: 63894976565097b3e51f438e59942f728adda88b85324d510298f245e913cc7f</p>
+  </section>
+
+  <section class="grid">
+    <div class="card"><div class="ic">📶</div><h3>Offline Bluetooth chat</h3><p>Find nearby GeoTalk users and chat directly phone-to-phone. No SIM, no Wi-Fi, no data cost.</p></div>
+    <div class="card"><div class="ic">🧭</div><h3>Smart Auto-Router</h3><p>GeoTalk automatically chooses how a message travels — nearby by Bluetooth today, with Wi-Fi Direct, mesh and internet routes on the roadmap.</p></div>
+    <div class="card"><div class="ic">📍</div><h3>GPS location</h3><p>See your live coordinates and how far away the other person is. GPS is used for location and distance only.</p></div>
+    <div class="card"><div class="ic">🔄</div><h3>In-app updates</h3><p>New versions arrive inside the app — no need to hunt for download links again.</p></div>
+  </section>
+
+  <section class="steps">
+    <h2>How to install</h2>
+    <div class="step"><div class="num">1</div><p><b>Download</b> the APK using the button above.</p></div>
+    <div class="step"><div class="num">2</div><p><b>Open the file</b> and allow <b>“Install unknown apps”</b> for your browser when Android asks — this is a one-time permission for apps installed outside the Play Store.</p></div>
+    <div class="step"><div class="num">3</div><p>Tap <b>Install</b>, open GeoTalk, create your account, and turn on Bluetooth to find people nearby.</p></div>
+  </section>
+
+  <footer>
+    GeoTalk v1.0.0 · Made by Flores<br>
+    This is the only official download page for GeoTalk.
+  </footer>
+</div>
+</body>
+</html>
